@@ -9,12 +9,14 @@ is shown in the Odoo logs.
 Instead of parsing the Odoo logs, we will parse the Apache access logs. A failed Odoo login
 will cause Odoo to re-send the login page, which Apache will log as a POST for /web/login.
 Because Apache knows the true IP, fail2ban can now work as intended. 
+
 ---
 ## Requirements
  - You run Odoo behind an Apache SSL proxy (port 443).
  - each of your apache vhosts resides in a seperate file, such that you can pinpoint the Odoo vhost file.
  - You have installed fail2ban and it works, for example for sshd.
  ---
+ 
 ## What this role will do
 For fail2ban to work, we need to make sure that fail2ban can access the 
 specific log entries for requests towards the Odoo system. Therefore:
