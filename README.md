@@ -3,7 +3,7 @@
 ### The Situation
 You want to harden your Odoo system against brute-force attacks by blocking IPs for which several login attempts failed.
 ### The problem
-You run Odoo behind ana Apache proxy, and failed login attempts will be logged by Odoo, but only the IP "127.0.0.1" 
+You run Odoo behind an Apache proxy, and failed login attempts will be logged by Odoo, but only the IP "127.0.0.1" 
 is shown in the Odoo logs.
 ### The solution
 Instead of parsing the Odoo logs, we will parse the Apache access logs. A failed Odoo login
@@ -37,10 +37,6 @@ specific log entries for requests towards the Odoo system. Therefore:
         - ansible-odoo-rules-for-fail2ban
 
  ---
-## License
+## License / Author
 
-GNU GENERAL PUBLIC LICENSE
-
-## Author Information
-
-This role was created in 2018 by [Jörg Schumacher](https://www.ehanse.de/).
+GNU GENERAL PUBLIC LICENSE. This role was created in 2018 by [Jörg Schumacher](https://www.ehanse.de/).
